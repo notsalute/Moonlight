@@ -11,6 +11,8 @@ using Moonlight_Client.Discord;
 using UnhollowerRuntimeLib;
 using Moonlight_Client.Functions;
 using Moonlight_Client.SDK;
+using VRC.Core;
+using System.Reflection;
 
 [assembly: MelonInfo(typeof(Moonlight_Client.Main), "Moonlight Revamped", "1.0", "notsalute And Zilla", "Credits to Snow and HyperV for the help ")]
 [assembly: MelonColor(ConsoleColor.Magenta)]
@@ -27,18 +29,20 @@ namespace Moonlight_Client
             MelonCoroutines.Start(TitleAnim.ChangeTitle());
             Console.Title = $"|| Moonlight Client ||";
             Files.ModFiles.Initialize();
-
-
             MelonLogger.Msg("Done!");
             MelonLogger.Msg("Initializing Client..");
             MelonCoroutines.Start(WaitForQM());
             MelonCoroutines.Start(WaitForSM());
             ClassInjector.RegisterTypeInIl2Cpp<NameplatesMono>();
             Patches.Initialize();
+            var original = typeof(APIUser).GetProperty(nameof(APIUser.allowAvatarCopying)).GetSetMethod();
+            var method = typeof(Main).GetMethod(nameof(Main.Hook), BindingFlags.NonPublic | BindingFlags.Static);
+            var patch = new HarmonyLib.HarmonyMethod(method);
+            HarmonyInstance.Patch(original, patch);
 
             MelonLogger.Msg("Done!");
         }
-
+        private static void Hook(ref bool __0) => __0 = true;
         public override void OnSceneWasInitialized(int buildIndex, string sceneName)
         {
             if (buildIndex == 1)
