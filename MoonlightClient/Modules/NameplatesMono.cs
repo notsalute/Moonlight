@@ -105,7 +105,7 @@ namespace Moonlight_Client.Modules
 
 		private TextMeshProUGUI statsText;
 
-		private ImageThreeSlice background;
+		//private ImageThreeSlice background;
 
 		private string UserID = "";
 

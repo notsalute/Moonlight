@@ -13,6 +13,7 @@ using Moonlight_Client.Functions;
 using Moonlight_Client.SDK;
 using VRC.Core;
 using System.Reflection;
+using Moonlight_Client.Core.Auth;
 
 [assembly: MelonInfo(typeof(Moonlight_Client.Main), "Moonlight Revamped", "1.0", "notsalute And Zilla", "Credits to Snow and HyperV for the help ")]
 [assembly: MelonColor(ConsoleColor.Magenta)]
@@ -29,10 +30,12 @@ namespace Moonlight_Client
             MelonCoroutines.Start(TitleAnim.ChangeTitle());
             Console.Title = $"|| Moonlight Client ||";
             Files.ModFiles.Initialize();
+            MelonCoroutines.Start(WaitForUser());
             MelonLogger.Msg("Done!");
             MelonLogger.Msg("Initializing Client..");
             MelonCoroutines.Start(WaitForQM());
             MelonCoroutines.Start(WaitForSM());
+            
             ClassInjector.RegisterTypeInIl2Cpp<NameplatesMono>();
             Patches.Initialize();
             var original = typeof(APIUser).GetProperty(nameof(APIUser.allowAvatarCopying)).GetSetMethod();
@@ -42,6 +45,16 @@ namespace Moonlight_Client
 
             MelonLogger.Msg("Done!");
         }
+
+        internal IEnumerator WaitForUser()
+        {
+            while (APIUser.CurrentUser?.id == null) yield return null;
+            UserAuth.Initialize(); //Start Auth
+            MelonLogger.Msg($"Logged in as: {APIUser.CurrentUser.displayName}"); //Print User
+            yield break;
+        }
+
+
         private static void Hook(ref bool __0) => __0 = true;
         public override void OnSceneWasInitialized(int buildIndex, string sceneName)
         {
