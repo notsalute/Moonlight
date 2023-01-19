@@ -13,6 +13,7 @@ namespace Moonlight_Client.Core.Auth
 {
     internal class UserAuth
     {
+        //You're welcome salute -Scrim
         public static void Initialize()
         {
             MelonLogger.Msg(ConsoleColor.Yellow, "Loading Moonlight auth...");

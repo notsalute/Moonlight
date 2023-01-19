@@ -13,6 +13,7 @@ namespace Moonlight_Client.Core.Auth
 {
     internal class AuthManager
     {
+        //Login or register
         public static void Login()
         {
             MelonLogger.Msg(ConsoleColor.Magenta, "You will now be logging into your Moonlight Account:");

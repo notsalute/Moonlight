@@ -22,6 +22,12 @@ using UnityEngine;
 
 namespace AuthGG
 {
+    /*
+     * !!!!!!!!! DO NOT TOUCH THIS !!!!!!!!!
+     * !!!!!!!!! DO NOT TOUCH THIS !!!!!!!!!
+     * !!!!!!!!! DO NOT TOUCH THIS !!!!!!!!!
+     * !!!!!!!!! DO NOT TOUCH THIS !!!!!!!!!
+     */
     internal class App
     {
         public static string GrabVariable(string name)
