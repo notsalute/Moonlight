@@ -135,6 +135,24 @@ namespace Modules
             {
                 Moonlight_Client.Functions.BetterMurderCheats.lightsout();
             }, "Baby lock the door and turn the lights down low");
+            new QMToggleButton(Murder4, 3, 3, "RapidFireGuns", delegate
+            {
+                MelonCoroutines.Start(Moonlight_Client.Functions.BetterMurderCheats.RapidFire());
+                
+            }, delegate
+            {
+                MelonCoroutines.Stop(Moonlight_Client.Functions.BetterMurderCheats.RapidFire());
+
+            }, "RATATATATATATA");
+            new QMToggleButton(Murder4, 4, 3, "SelfGoldenGun", delegate
+            {
+                MelonCoroutines.Start(Moonlight_Client.Functions.BetterMurderCheats.SelfGoldenGun());
+
+            }, delegate
+            {
+                MelonCoroutines.Stop(Moonlight_Client.Functions.BetterMurderCheats.SelfGoldenGun());
+
+            }, "Wow a golden gun!");
             /*
             var PrisonEsc = new QMNestedButton(WorldMenu, 3, 0, "Prison Escape", null, "Prison Escape");
 
