@@ -1,0 +1,12 @@
+C:\Users\Itssnow\Downloads\Moonlight-master\Moonlight-master\MoonlightClient\obj\Debug\Moonlight.csproj.AssemblyReference.cache
+C:\Users\Itssnow\Downloads\Moonlight-master\Moonlight-master\MoonlightClient\obj\Debug\Moonlight.csproj.CoreCompileInputs.cache
+C:\Users\gagel\Desktop\midnight\VRCHAT\Moonlight-master\Moonlight-master\MoonlightClient\obj\Debug\Moonlight.csproj.AssemblyReference.cache
+C:\Users\gagel\Desktop\midnight\VRCHAT\Moonlight-master\Moonlight-master\MoonlightClient\obj\Debug\Moonlight.csproj.CoreCompileInputs.cache
+C:\Users\gagel\Desktop\midnight\VRCHAT\Moonlight-master\Moonlight-master\MoonlightClient\bin\Debug\Moonlight.dll
+C:\Users\gagel\Desktop\midnight\VRCHAT\Moonlight-master\Moonlight-master\MoonlightClient\bin\Debug\Moonlight.pdb
+C:\Users\gagel\Desktop\midnight\VRCHAT\Moonlight-master\Moonlight-master\MoonlightClient\bin\Debug\Newtonsoft.Json.dll
+C:\Users\gagel\Desktop\midnight\VRCHAT\Moonlight-master\Moonlight-master\MoonlightClient\bin\Debug\Oculus.VR.dll
+C:\Users\gagel\Desktop\midnight\VRCHAT\Moonlight-master\Moonlight-master\MoonlightClient\bin\Debug\RenderHeads.AVProMovieCapture.Runtime.dll
+C:\Users\gagel\Desktop\midnight\VRCHAT\Moonlight-master\Moonlight-master\MoonlightClient\obj\Debug\Moonlight.csproj.CopyComplete
+C:\Users\gagel\Desktop\midnight\VRCHAT\Moonlight-master\Moonlight-master\MoonlightClient\obj\Debug\Moonlight.dll
+C:\Users\gagel\Desktop\midnight\VRCHAT\Moonlight-master\Moonlight-master\MoonlightClient\obj\Debug\Moonlight.pdb
